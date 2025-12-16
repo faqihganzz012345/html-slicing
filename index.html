@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortuseight - Official Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/download');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ef4444;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-red-600">ORTUSEIGHT</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="relative">
+                        <input type="text" placeholder="Cari produk..." class="border rounded-full py-2 px-4 pr-10 focus:outline-none focus:border-red-500 w-64">
+                        <button class="absolute right-2 top-2.5 text-gray-500 hover:text-red-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <button class="text-gray-700 hover:text-red-600">
+                        <i class="fas fa-user text-xl"></i>
+                    </button>
+                    <button class="text-gray-700 hover:text-red-600 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="border-t">
+            <div class="container mx-auto px-4">
+                <ul class="flex space-x-8 py-3 overflow-x-auto">
+                    <li><a href="index.html" class="nav-link active text-gray-800 font-medium whitespace-nowrap">HOME</a></li>
+                    <li><a href="football.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">FOOTBALL</a></li>
+                    <li><a href="futsal.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">FUTSAL</a></li>
+                    <li><a href="lifestyle.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">LIFESTYLE</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">APPAREL</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">ACCESSORIES</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">PROMO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero-bg relative text-white min-h-screen flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">CATALYST LIBERTE</h1>
+                <p class="text-lg md:text-xl mb-8 leading-relaxed">Sepatu bola terbaru dengan teknologi canggih untuk performa maksimal di lapangan. Dirancang untuk champion.</p>
+                <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full text-lg transition transform hover:scale-105">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- Featured Athletes -->
+    <img 
+  src="images/download (1)" 
+  alt="Athlete 1" 
+  class="w-100 h-100 object-cover rounded-lg mb-4 mx-auto transition-transform duration-300 hover:scale-110">
+
+
+<img 
+  src="images/download (2)" 
+  alt="Athlete 1" 
+  class="w-82 h-82 object-cover rounded-lg mb-4 mx-auto transition-transform duration-300 hover:scale-110">
+
+    
+
+    <!-- News Section -->
+        <!-- News Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">WHAT'S UP?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="images/Jogosala-Radiant-SE.jpg" alt="News 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">Ortuseight Jogosala Radiant Se, Sepatu Futsal yang Jadi Simbol Perjalanan Rio Pangestu Putra</h3>
+                        <p class="text-sm text-gray-600 mb-3"></p>
+                        <a href="#" class="text-red-600 text-sm font-medium hover:text-red-700">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+                
+                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="images/press-release_BEKHAM.jpg" alt="News 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">Langkah Lokal, Semangat Nasional - Ortuseight dan Bekcham Putra Luncurkan Catalyst Incognity V2</h3>
+                        <p class="text-sm text-gray-600 mb-3"></p>
+                        <a href="#" class="text-red-600 text-sm font-medium hover:text-red-700">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+                
+                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="images/press-release_LAUNCHING.jpg" alt="News 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">From Research to Reality: Ortuseight Running 2026 The Journey of innovation and transformation</h3>
+                        <p class="text-sm text-gray-600 mb-3"></p>
+                        <a href="#" class="text-red-600 text-sm font-medium hover:text-red-700">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                
+                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="images/RECOVERY-SANDALS_magazine.jpg" alt="News 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">Sandal Recovery Dual Density dari Ortuseight, Solusi Gaya dan Kenyamanan Pasca-Latihan</h3>
+                        <p class="text-sm text-gray-600 mb-3"></p>
+                        <a href="#" class="text-red-600 text-sm font-medium hover:text-red-700">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ORTUSEIGHT</h3>
+                    <p class="text-sm text-gray-400 mb-4">Brand olahraga lokal dengan kualitas internasional untuk mendukung atlet Indonesia.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="football.html" class="hover:text-white">Football</a></li>
+                        <li><a href="futsal.html" class="hover:text-white">Futsal</a></li>
+                        <li><a href="lifestyle.html" class="hover:text-white">Lifestyle</a></li>
+                        <li><a href="#" class="hover:text-white">Apparel</a></li>
+                        <li><a href="#" class="hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Cara Belanja</a></li>
+                        <li><a href="#" class="hover:text-white">Pengiriman</a></li>
+                        <li><a href="#" class="hover:text-white">Pembayaran</a></li>
+                        <li><a href="#" class="hover:text-white">Pengembalian</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +62 21 1234 5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@ortuseight.id</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; 2023 Ortuseight. All rights reserved.</p>
+                    <div class="flex space-x-4">
+                        <img src="images/b228c4523a9d1261e4606e9bf3a4882f.png" alt="Payment Method" class="h-8">
+                        <img src="images/ef22f26ccc342ad4dea14cc383299d64.png" alt="Payment Method" class="h-8">
+                        <img src="images/jcb.webp" alt="Payment Method" class="h-8">
+                        <img src="images/349228.png" alt="Payment Method" class="h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futsal - Ortuseight Official Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/fs1new.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ef4444;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .badge-discount {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-red-600">ORTUSEIGHT</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="relative">
+                        <input type="text" placeholder="Cari produk futsal..." class="border rounded-full py-2 px-4 pr-10 focus:outline-none focus:border-red-500 w-64">
+                        <button class="absolute right-2 top-2.5 text-gray-500 hover:text-red-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <button class="text-gray-700 hover:text-red-600">
+                        <i class="fas fa-user text-xl"></i>
+                    </button>
+                    <button class="text-gray-700 hover:text-red-600 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="border-t">
+            <div class="container mx-auto px-4">
+                <ul class="flex space-x-8 py-3 overflow-x-auto">
+                    <li><a href="index.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">HOME</a></li>
+                    <li><a href="football.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">FOOTBALL</a></li>
+                    <li><a href="futsal.html" class="nav-link active text-gray-800 font-medium whitespace-nowrap">FUTSAL</a></li>
+                    <li><a href="lifestyle.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">LIFESTYLE</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">APPAREL</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">ACCESSORIES</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">PROMO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">FUTSAL COLLECTION</h1>
+            <p class="text-lg mb-6">Sepatu futsal indoor untuk kontrol dan agility maksimal di lapangan dalam</p>
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full transition">Semua</button>
+                <button class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full transition">Indoor</button>
+                <button class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full transition">Court</button>
+                <button class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full transition">Turf</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-6 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <select class="border rounded-lg px-4 py-2 focus:outline-none focus:border-red-500">
+                        <option>Urutkan: Terbaru</option>
+                        <option>Harga: Rendah ke Tinggi</option>
+                        <option>Harga: Tinggi ke Rendah</option>
+                        <option>Nama: A-Z</option>
+                    </select>
+                    <select class="border rounded-lg px-4 py-2 focus:outline-none focus:border-red-500">
+                        <option>Semua Ukuran</option>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+                        <option>41</option>
+                        <option>42</option>
+                        <option>43</option>
+                        <option>44</option>
+                    </select>
+                </div>
+                <p class="text-gray-600">Menampilkan 8 produk</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/28010066_MIRAGE_TRAINING_BIBS_-_DEEP_BLUEArtboard_1.jpg" alt="Catalyst Liberte V5 FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HORIZON TF</h3>
+                        <p class="text-xs text-gray-500 mb-2">AQUA LIME WHITE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 296.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 329.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020737_RAMPAGE_TF_-_NAVY_CAMOArtboard_1.jpg" alt="Catalyst Liberte V5 FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">RAMPAGE TF</h3>
+                        <p class="text-xs text-gray-500 mb-2">NAVY CAMO</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 449.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 499.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020736_RAMPAGE_TF_-_WHITE_CAMOArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">RAMPAGE FG</h3>
+                        <p class="text-xs text-gray-500 mb-2">WHITE CAMO</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 449.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 499.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020723_LUMINE_IN_-_BLACK_PINK_CYANArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">LUMINE IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">BLACK PINK CYAN</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 341.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 379.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020738_HORIZON_TF_-_BLACK_SILVERArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HORIZON TF</h3>
+                        <p class="text-xs text-gray-500 mb-2">BLACK SILVER</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 296.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 329.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020725_JOGOSALA_LINEAGE_-_DEEP_BLUE_SANDArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">JOGOSALA LINEAGE</h3>
+                        <p class="text-xs text-gray-500 mb-2">DEEP BLUE SAND</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 449.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 499.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Product 7 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020734_HORIZON_IN_-_SALMON_PINK_CYANArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HORIZON IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">SALMON PINK CYAN</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 269.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+                
+                
+                
+                <!-- Product 8 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020708_JOGOSALA_RADIANT_SE_-_OFF_WHITE_CAMOArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">JOGOSALA RADIANT SE</h3>
+                        <p class="text-xs text-gray-500 mb-2">OFF WHITE CAMO</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 539.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 599.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Product 9 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020728_CATALYST_LIBERTE_V5_IN_-_NAVY_TEAL_ORTRANGEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">CATALYST LIBERTE V5 IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">NAVY TEAL ORTRANGE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 584.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 649.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Product 10 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020727_CATALYST_LIBERTE_V5_IN_-_WHITE_PINK_VORTEXArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">CATALYST LIBERTE V5 IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">WHITE PINK VORTEX</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 584.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 649.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+                <!-- Product 11 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020724_JOGOSALA_LINEAGE_-_BEIGE_BLUEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">JOGOSALA LINEAGE</h3>
+                        <p class="text-xs text-gray-500 mb-2">BEIGE BLUE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 449.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 499.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Product 12 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020722_LUMINE_IN_-_VORTEX_PINK_BLUEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">LUMINE IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">VORTEX PINK BLUE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 341.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 379.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Product 13 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020714_CATALYST_TRIDENT_IN_-_NAVY_CAMOArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">CATALYST TRIDENT IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">NAVY CAMO</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 431.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 479.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Product 14 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020735_ZENITH_IN_-_AQUA_WHITEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">ZENITH IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">AQUA WHITE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 269.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Product 15 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020733_MIRAGE_IN_-_SILVER_TEALArtboard_11 (1).jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">MIRAGE IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">SILVER TEAL</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 269.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                <!-- Product 15 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="futsal/11020719_CATALYST_IMPERIUM_IN_-_CYAN_BLUEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">CATALYST IMPERIUM IN</h3>
+                        <p class="text-xs text-gray-500 mb-2">CYAN BLUE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 404.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 449.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex space-x-2">
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100"><<</button>
+                    <button class="px-3 py-2 rounded-lg bg-red-600 text-white">1</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">2</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">3</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">4</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">5</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">...</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">26</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">>></button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ORTUSEIGHT</h3>
+                    <p class="text-sm text-gray-400 mb-4">Brand olahraga lokal dengan kualitas internasional untuk mendukung atlet Indonesia.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="football.html" class="hover:text-white">Football</a></li>
+                        <li><a href="futsal.html" class="hover:text-white">Futsal</a></li>
+                        <li><a href="lifestyle.html" class="hover:text-white">Lifestyle</a></li>
+                        <li><a href="#" class="hover:text-white">Apparel</a></li>
+                        <li><a href="#" class="hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Cara Belanja</a></li>
+                        <li><a href="#" class="hover:text-white">Pengiriman</a></li>
+                        <li><a href="#" class="hover:text-white">Pembayaran</a></li>
+                        <li><a href="#" class="hover:text-white">Pengembalian</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +62 21 1234 5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@ortuseight.id</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; 2023 Ortuseight. All rights reserved.</p>
+                    <div class="flex space-x-4">
+                        <img src="images/b228c4523a9d1261e4606e9bf3a4882f.png" alt="Payment Method" class="h-8">
+                        <img src="images/ef22f26ccc342ad4dea14cc383299d64.png" alt="Payment Method" class="h-8">
+                        <img src="images/jcb.webp" alt="Payment Method" class="h-8">
+                        <img src="images/349228.png" alt="Payment Method" class="h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

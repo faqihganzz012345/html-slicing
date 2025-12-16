@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle - Ortuseight Official Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('lifestyle/sn-min.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ef4444;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .badge-discount {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-red-600">ORTUSEIGHT</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="relative">
+                        <input type="text" placeholder="Cari produk lifestyle..." class="border rounded-full py-2 px-4 pr-10 focus:outline-none focus:border-red-500 w-64">
+                        <button class="absolute right-2 top-2.5 text-gray-500 hover:text-red-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <button class="text-gray-700 hover:text-red-600">
+                        <i class="fas fa-user text-xl"></i>
+                    </button>
+                    <button class="text-gray-700 hover:text-red-600 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="border-t">
+            <div class="container mx-auto px-4">
+                <ul class="flex space-x-8 py-3 overflow-x-auto">
+                    <li><a href="index.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">HOME</a></li>
+                    <li><a href="football.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">FOOTBALL</a></li>
+                    <li><a href="futsal.html" class="nav-link text-gray-800 font-medium whitespace-nowrap">FUTSAL</a></li>
+                    <li><a href="lifestyle.html" class="nav-link active text-gray-800 font-medium whitespace-nowrap">LIFESTYLE</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">APPAREL</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">ACCESSORIES</a></li>
+                    <li><a href="#" class="nav-link text-gray-800 font-medium whitespace-nowrap">PROMO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">LIFESTYLE COLLECTION</h1>
+            <p class="text-lg mb-6">Koleksi lifestyle untuk gaya kasual yang nyaman dan stylish sehari-hari</p>
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full transition">Semua</button>
+                <button class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full transition">Sepatu</button>
+                <button class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full transition">Tas</button>
+                <button class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full transition">Aksesoris</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-6 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <select class="border rounded-lg px-4 py-2 focus:outline-none focus:border-red-500">
+                        <option>Urutkan: Terbaru</option>
+                        <option>Harga: Rendah ke Tinggi</option>
+                        <option>Harga: Tinggi ke Rendah</option>
+                        <option>Nama: A-Z</option>
+                    </select>
+                    <select class="border rounded-lg px-4 py-2 focus:outline-none focus:border-red-500">
+                        <option>Semua Ukuran</option>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+                        <option>41</option>
+                        <option>42</option>
+                        <option>43</option>
+                        <option>44</option>
+                    </select>
+                </div>
+                <p class="text-gray-600">Menampilkan 8 produk</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/12040028_HYPERBLAST_FLIP-FLOPS_-_BEIGE_CREAMArtboard_1.jpg" alt="Catalyst Liberte V5 FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HYPERBLAST FLIP-FLOPS</h3>
+                        <p class="text-xs text-gray-500 mb-2">BEIGE CREAM</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 269.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/34010074_BERLIN_TOTE_BAG_-_BLACKArtboard_1.jpg" alt="Catalyst Liberte V5 FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">BERLIN TOTE BAG</h3>
+                        <p class="text-xs text-gray-500 mb-2">BLACK</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 381.650</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 449.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/34010073_BERLIN_TOTE_BAG_-_NAVYArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">BERLIN TOTE BAG</h3>
+                        <p class="text-xs text-gray-500 mb-2">NAVY</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 381.650</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 449.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/12040028_HYPERBLAST_FLIP-FLOPS_-_BEIGE_CREAMArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HYPERLAST SLIDES</h3>
+                        <p class="text-xs text-gray-500 mb-2">BEIGE CREAM</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 269.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/12040030_HYPERBLAST_SLIDES_-_SAGE_GREENArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HYPERLAST SLIDES</h3>
+                        <p class="text-xs text-gray-500 mb-2">SAGE GREEN</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 269.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/25010027_BOSTON_PANTS_-_GREYArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">CATALYST MAMBIRIU V2 FG SE</h3>
+                        <p class="text-xs text-gray-500 mb-2">CARMINE WHITE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 629.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 699.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Product 7 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/11030303_HYPERBLAST_SLIP-ON_-_BEIGEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HYPERBLAST SLIP-ON</h3>
+                        <p class="text-xs text-gray-500 mb-2">BEIGE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 539.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 599.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+                
+                
+                
+                <!-- Product 8 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/11030302_HYPERBLAST_SLIP-ON_-_ASH_GREY_Artboard_1.jpg" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HYPERBLAST SLIP-ON</h3>
+                        <p class="text-xs text-gray-500 mb-2">ASH GREY</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 539.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 599.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Product 9 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/12040027_HYPERBLAST_FLIP-FLOPS_SAGE_GREENArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">HYPERBLAST FLIP-FLOPS</h3>
+                        <p class="text-xs text-gray-500 mb-2">SAGE GREEN</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 269.100</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Product 10 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/34010076_LUMINOUS_BACKPACK_-_BLACK_ORTRANGEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">LUMINOUS BACKPACK</h3>
+                        <p class="text-xs text-gray-500 mb-2">BLACK ORTRANGE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 254.150</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+                <!-- Product 11 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/34010075_LUMINOUS_BACKPACK_-_GREY_TURQUOISArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">LUMINOUS BACKPACK</h3>
+                        <p class="text-xs text-gray-500 mb-2">GREY TURQUOIS</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 254.150</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 299.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Product 12 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/28010061_ORTUSEIGHT_MICROFIBER_TOWEL_-_ORTRANGEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">MICROFIBER TOWEL</h3>
+                        <p class="text-xs text-gray-500 mb-2">ORTRANGE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 50.150</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 59.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Product 13 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/24010035_BOSTON_SWEATER_-_GREYArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">BOSTON SWEATER</h3>
+                        <p class="text-xs text-gray-500 mb-2">GREY</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 339.150</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 399.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Product 14 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/24010036_BOSTON_SWEATER_-_BEIGEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">BOSTON SWEATER</h3>
+                        <p class="text-xs text-gray-500 mb-2">BEIGE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 339.150</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 399.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Product 15 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/24010036_BOSTON_SWEATER_-_BEIGEArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">BOSTON PANTS</h3>
+                        <p class="text-xs text-gray-500 mb-2">BEIGE</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 339.150</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 399.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                <!-- Product 15 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="lifestyle/23010162_ESSENTIALS_T-SHIRT_-_BLACKArtboard_1.jpg" alt="Mirage FG" class="w-full h-48 object-cover">
+                        <span class="badge-discount absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">15% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-sm mb-1">ESSENTIALS T-SHIRT</h3>
+                        <p class="text-xs text-gray-500 mb-2">BLACK</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-lg font-bold">IDR 109.650</span>
+                                <span class="text-xs text-gray-500 line-through ml-1">IDR 129.000</span>
+                            </div>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex space-x-2">
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100"><<</button>
+                    <button class="px-3 py-2 rounded-lg bg-red-600 text-white">1</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">2</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">3</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">4</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">5</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">...</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">26</button>
+                    <button class="px-3 py-2 rounded-lg bg-white hover:bg-gray-100">>></button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ORTUSEIGHT</h3>
+                    <p class="text-sm text-gray-400 mb-4">Brand olahraga lokal dengan kualitas internasional untuk mendukung atlet Indonesia.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="football.html" class="hover:text-white">Football</a></li>
+                        <li><a href="futsal.html" class="hover:text-white">Futsal</a></li>
+                        <li><a href="lifestyle.html" class="hover:text-white">Lifestyle</a></li>
+                        <li><a href="#" class="hover:text-white">Apparel</a></li>
+                        <li><a href="#" class="hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Cara Belanja</a></li>
+                        <li><a href="#" class="hover:text-white">Pengiriman</a></li>
+                        <li><a href="#" class="hover:text-white">Pembayaran</a></li>
+                        <li><a href="#" class="hover:text-white">Pengembalian</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +62 21 1234 5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@ortuseight.id</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; 2023 Ortuseight. All rights reserved.</p>
+                    <div class="flex space-x-4">
+                         <img src="images/b228c4523a9d1261e4606e9bf3a4882f.png" alt="Payment Method" class="h-8">
+                        <img src="images/ef22f26ccc342ad4dea14cc383299d64.png" alt="Payment Method" class="h-8">
+                        <img src="images/jcb.webp" alt="Payment Method" class="h-8">
+                        <img src="images/349228.png" alt="Payment Method" class="h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
